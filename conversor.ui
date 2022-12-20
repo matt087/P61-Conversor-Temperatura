@@ -15,7 +15,7 @@
   </property>
   <property name="windowIcon">
    <iconset resource="recursos.qrc">
-    <normaloff>:/recursos/img/icono.png</normaloff>:/recursos/img/icono.png</iconset>
+    <normaloff>:/recursos/img/fiebre.png</normaloff>:/recursos/img/fiebre.png</iconset>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
    <item>
@@ -37,6 +37,12 @@
        <widget class="QGroupBox" name="groupBox">
         <property name="title">
          <string>Centígrados</string>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout">
          <item>
