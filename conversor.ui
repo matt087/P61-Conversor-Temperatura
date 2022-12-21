@@ -21,22 +21,16 @@
    <item>
     <widget class="QWidget" name="widget" native="true">
      <layout class="QHBoxLayout" name="horizontalLayout">
-      <property name="leftMargin">
-       <number>0</number>
-      </property>
-      <property name="topMargin">
-       <number>0</number>
-      </property>
-      <property name="rightMargin">
-       <number>0</number>
-      </property>
-      <property name="bottomMargin">
-       <number>0</number>
-      </property>
       <item>
        <widget class="QGroupBox" name="groupBox">
+        <property name="styleSheet">
+         <string notr="true">font: 63 13pt &quot;URW Gothic&quot;;</string>
+        </property>
         <property name="title">
          <string>Centígrados</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
         </property>
         <property name="flat">
          <bool>false</bool>
@@ -48,14 +42,14 @@
          <item>
           <widget class="QLCDNumber" name="outCent">
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(252, 233, 79);</string>
+            <string notr="true">background-color: rgb(163, 141, 244);</string>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QDial" name="inCent">
            <property name="minimum">
-            <number>-18</number>
+            <number>0</number>
            </property>
           </widget>
          </item>
@@ -64,14 +58,23 @@
       </item>
       <item>
        <widget class="QGroupBox" name="groupBox_2">
+        <property name="styleSheet">
+         <string notr="true">font: 63 13pt &quot;URW Gothic&quot;;
+</string>
+        </property>
         <property name="title">
          <string>Fahrenheit</string>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout_2">
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
          <item>
           <widget class="QLCDNumber" name="outFahr">
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(252, 175, 62);</string>
+            <string notr="true">
+background-color: rgb(153, 193, 241);
+</string>
            </property>
            <property name="intValue" stdset="0">
             <number>32</number>
@@ -80,11 +83,57 @@
          </item>
          <item>
           <widget class="QDial" name="inFahr">
+           <property name="minimum">
+            <number>32</number>
+           </property>
            <property name="maximum">
             <number>210</number>
            </property>
            <property name="value">
             <number>32</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_3">
+        <property name="styleSheet">
+         <string notr="true">font: 75 italic 11pt &quot;Ubuntu&quot;;
+font: 63 13pt &quot;URW Gothic&quot;;</string>
+        </property>
+        <property name="title">
+         <string>Kelvin</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QLCDNumber" name="outKel">
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(26, 232, 232);
+color: rgb(0, 0, 0);</string>
+           </property>
+           <property name="value" stdset="0">
+            <double>273.000000000000000</double>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDial" name="inKel">
+           <property name="minimum">
+            <number>273</number>
+           </property>
+           <property name="maximum">
+            <number>372</number>
+           </property>
+           <property name="value">
+            <number>273</number>
            </property>
           </widget>
          </item>
@@ -145,6 +194,22 @@
     <hint type="destinationlabel">
      <x>222</x>
      <y>70</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>inKel</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>outKel</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>336</x>
+     <y>202</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>336</x>
+     <y>98</y>
     </hint>
    </hints>
   </connection>

@@ -16,9 +16,9 @@ public:
     ~Conversor();
 
 public slots:
-    void cent2fahr(int grados);
-    void fahr2cent(int grados);
-
+    void cent2oth(int grados);
+    void fahr2oth(int grados);
+    void kel2oth(int grados);
 private:
     Ui::Conversor *ui;
 };
